@@ -1,3 +1,4 @@
+// Session Schema
 import mongoose from 'mongoose';
 
 const SessionSchema = new mongoose.Schema({

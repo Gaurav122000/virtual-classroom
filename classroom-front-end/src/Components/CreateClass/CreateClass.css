@@ -1,0 +1,36 @@
+.class-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .class-form-container input,
+  .class-form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .class-form-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .class-form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .class-id {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  

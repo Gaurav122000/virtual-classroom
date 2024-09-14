@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { io } from 'socket.io-client';
+// import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
+// const socket = io('http://localhost:5000');
 
 function AddComment({ sessionId }) {
   const [text, setText] = useState('');
@@ -10,7 +10,7 @@ function AddComment({ sessionId }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.post(`http://localhost:5000/sessions/${sessionId}/comments`, { text });
-    socket.emit('comment', response.data);
+    //socket.emit('comment', response.data);
     setText('');
   };
 

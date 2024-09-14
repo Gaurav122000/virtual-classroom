@@ -13,6 +13,7 @@ import CreateSession from './Components/CreateSession/CreateSession.jsx';
 import SessionList from './Components/SessionList/SessionList.jsx';
 import CommentList from './Components/CommentList/CommentList.jsx';
 import AddComment from './Components/AddComment/AddComment.jsx';
+import Navbar from './Components/Navbar/Navbar.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>
+  },
+  {
+    path: "/navbar",
+    element: <Navbar/>
   },
   {
     path: "/app",

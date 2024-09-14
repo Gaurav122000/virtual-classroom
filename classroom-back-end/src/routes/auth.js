@@ -20,7 +20,13 @@ router.post('/login', async (req, res) => {
     return res.status(400).send('Invalid credentials');
   }
   const token = jwt.sign({ userId: user._id, role: user.role }, 'secret');
-  res.json({ token });
+  res.json({ token, role: user.role });
+});
+
+// Logout route
+router.post('/logout', (req, res) => {
+  // Clear the token on the client side
+  res.status(200).send('User logged out');
 });
 
 export default router;

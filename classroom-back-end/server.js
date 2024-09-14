@@ -29,19 +29,19 @@ app.use('/sessions', commentRoutes);
 const server = http.createServer(app);
 
 // WebSocket setup
-const io = new Server(server);
+// const io = new Server(server);
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
+// io.on('connection', (socket) => {
+//   console.log('a user connected');
 
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
+//   socket.on('disconnect', () => {
+//     console.log('user disconnected');
+//   });
 
-  socket.on('comment', (comment) => {
-    io.emit('comment', comment);
-  });
-});
+//   socket.on('comment', (comment) => {
+//     io.emit('comment', comment);
+//   });
+// });
 
 // Start server
 server.listen(PORT, () => {

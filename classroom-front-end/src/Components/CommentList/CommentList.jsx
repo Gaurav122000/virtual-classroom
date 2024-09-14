@@ -1,9 +1,9 @@
 // CommentList.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { io } from 'socket.io-client';
+// import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
+// const socket = io('http://localhost:5000');
 
 function CommentList({ sessionId }) {
   const [comments, setComments] = useState([]);
@@ -15,13 +15,13 @@ function CommentList({ sessionId }) {
     };
     fetchComments();
 
-    socket.on('comment', (comment) => {
-      setComments((prevComments) => [...prevComments, comment]);
-    });
+    // socket.on('comment', (comment) => {
+    //   setComments((prevComments) => [...prevComments, comment]);
+    // });
 
-    return () => {
-      socket.off('comment');
-    };
+    // return () => {
+    //   socket.off('comment');
+    // };
   }, [sessionId]);
 
   return (

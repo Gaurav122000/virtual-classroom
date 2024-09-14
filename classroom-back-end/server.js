@@ -20,6 +20,13 @@ mongoose.connect('mongodb://localhost:27017/virtual-classroom', {
   useUnifiedTopology: true,
 });
 
+// Use CORS middleware
+app.use(cors({
+  origin: 'http://localhost:5173', // Allow requests from this origin
+  methods: ['GET', 'POST'], // Allow these HTTP methods
+  credentials: true // Allow credentials (cookies, authorization headers, etc.)
+}));
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/classes', classRoutes);
@@ -28,20 +35,26 @@ app.use('/sessions', commentRoutes);
 // Create HTTP server
 const server = http.createServer(app);
 
-// WebSocket setup
-// const io = new Server(server);
+// WebSocket setup with CORS
+const io = new Server(server, {
+  cors: {
+    origin: 'http://localhost:5173', // Allow requests from this origin
+    methods: ['GET', 'POST'], // Allow these HTTP methods
+    credentials: true // Allow credentials (cookies, authorization headers, etc.)
+  }
+});
 
-// io.on('connection', (socket) => {
-//   console.log('a user connected');
+io.on('connection', (socket) => {
+  console.log('a user connected');
 
-//   socket.on('disconnect', () => {
-//     console.log('user disconnected');
-//   });
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
 
-//   socket.on('comment', (comment) => {
-//     io.emit('comment', comment);
-//   });
-// });
+  socket.on('comment', (comment) => {
+    io.emit('comment', comment);
+  });
+});
 
 // Start server
 server.listen(PORT, () => {

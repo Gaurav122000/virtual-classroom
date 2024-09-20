@@ -33,7 +33,6 @@ now both the front and back ends are fully running
   - Frontend sends the request to the backend.
   - Then Backend validates the user and generates a JWT token.
   - Token is sent back to the front end for authenticated requests.
-  - 
 ### Class Management
   - Admin/Instructors create and manage classes.
   - Classes have multiple units, and units have multiple sessions.

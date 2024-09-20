@@ -3,6 +3,9 @@
 # Video Demo
 https://e365ultra-my.sharepoint.com/:v:/g/personal/g7_e365ultra_onmicrosoft_com/EWw7n6XWreNFnhCewg3vG-sBtHJMzPVJpTfJxttUXi9aOA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=xBHZTC
 
+## PPT
+[Virtual-classroom-gaurav.pptx](https://github.com/user-attachments/files/17077395/Virtual-classroom-gaurav.pptx)
+
 # Tech Stack 
 - React.js – for front-end
 - Node.js – for Back-end
